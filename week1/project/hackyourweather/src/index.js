@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import CityList from './city-weather.json';
 ReactDOM.render(<App />, document.getElementById('root'));
 
 class WeatherD extends React.Component {
@@ -38,19 +39,12 @@ class Home extends React.Component {
   }
   getData() {
    setTimeout(() => {
-    fetch("//api.openweathermap.org/data/2.5/group?id=2643743,2759794,1850147&units=metric&appid=61e55a3ce4e8a3cb801d0d31649a27c6")
-    .then((response) => {return response.json()})
-    .then((data) => {
-      data.list.map((item, index) => {
-        this.state.list[index] = item
-      })
-      this.setState({isLoading:true});
-      console.table(this.state.list);
-    })
-    .catch(function(err) {
-        console.log('Fetch Error :-S '+err)
-    })
-  }, 10000);
+    CityList.map((city, index) => {
+      this.state.list[index] = city;
+    });
+    this.setState({isLoading:true});
+    console.table(CityList);
+   }, 10000);
   }
   componentDidMount() {
     this.getData();
@@ -66,8 +60,8 @@ class Home extends React.Component {
       <br />
       <br />
       {
-        list.map((item) => {
-           return <WeatherD City={item.name} CountryID={item.sys.country} Weather={item.weather[0].main} WD={item.weather[0].description} Mint={item.main.temp_min} Maxt={item.main.temp_max} Location={item.coord.lon+", "+item.coord.lat} />
+        list.map((city) => {
+           return <WeatherD City={city.name} CountryID={city.sys.country} Weather={city.weather[0].main} WD={city.weather[0].description} Mint={city.main.temp_min} Maxt={city.main.temp_max} Location={city.coord.lon+", "+city.coord.lat} />
         })
       }
       </>
