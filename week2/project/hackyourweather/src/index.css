@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f1f1f1;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.WeatherD
+{
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+  box-shadow:3px 3px 3px brown;
+  -moz-box-shadow:3px 3px 3px brown;
+  -webkit-box-shadow:3px 3px 3px brown;
+  -ms-box-shadow:3px 3px 3px brown;
+  -o-box-shadow:3px 3px 3px brown;
+  background-color:red;
+  line-height: 5px;
+  border-spacing: 3px;
+  font-weight: 300;
+  text-align: left;
+  color:#fff;
+  float:none;
+  clear:both;
+  overflow:hidden;
+  display: block;
+  margin:50px 50px 50px 50px;
+  padding:10px 10px 10px 10px;
+  opacity:0.7;
+}
+#root .WeatherD > h1, h2, h3, h4
+{
+  text-align:center;
+  padding:4px;
+}
+#root .WeatherD form
+{
+  float:none;
+  clear:both;
+  text-align: center;
+  padding:4px;
+}
+#root .WeatherD form input[type="text"]
+{
+  border-radius:5px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+  width:200px;
+  height:2em;
+  border:2px #f1f;
+  text-align: center;
+}
+#root .WeatherD form button[type="submit"]
+{
+  border-radius:5px;
+  width:90px;
+  height:2em;
+  border:2px #f1f1f1;
+  cursor:pointer;
+  text-align:center;
+  background-color:#000;
+  color:#fff;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+  font-weight: bold;
+}
+#root .WeatherD #load_img
+{
+  position:relative;
+  left:45%;
+  top:10px;
+}
