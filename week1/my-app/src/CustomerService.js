@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
+import deliveryLogo from "./assets/exercises/f-delivery.png"
+import coinLogo from "./assets/exercises/coin.png"
+import chatLogo from "./assets/exercises/chat.png"
+
+
 
 
 const content = [
-    { src: './../../assets/exercises/f-delivery.png', title: 'Free Shipping', description: 'Ta stelnoume me gaidouri' },
-    { src: './../../assets/exercises/coin.png', title: '100% Money Back', description: 'Xrwstame kai ths Mixalous' },
-    { src: '../../assets/exercises/chat.png', title: 'Online Support 24/7', description: 'Tha sas kanoume anapanthth na mhn xrewthoume' },
+    { src: deliveryLogo, title: 'Free Shipping', description: 'Ta stelnoume me gaidouri' },
+    { src: coinLogo, title: '100% Money Back', description: 'Xrwstame kai ths Mixalous' },
+    { src: chatLogo, title: 'Online Support 24/7', description: 'Tha sas kanoume anapanthth na mhn xrewthoume' },
 
 ];
 
