@@ -39,17 +39,13 @@ function Component(props) {
 
 
 function CustomerService() {
-
-
-
     return (
         <div>
             <Guarantee />
-
         </div>
     )
 }
 
 
 
-export default CustomerService;
+export default Guarantee;

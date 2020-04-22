@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
-import CustomerService from "./CustomerService";
 
+import Guarantee from './CustomerService';
+import Counter from "./Counter"
 
-const hobbies = ["Surfing", "Rock climbing", "Mountain biking", "Breakdancing"];
+let hobbies = ["Surfing", "Rock climbing", "Mountain biking", "Breakdancing"];
 
 
 function Hobby(props) {
@@ -20,9 +21,12 @@ function HobbyList() {
 function App() {
   return (
     <div className="App">
+      <h2>Hobbies</h2>
       <HobbyList />
       <h2>Customer Service</h2>
-      <CustomerService />
+      <Guarantee />
+      <h2>Counter Mini App</h2>
+      <Counter />
     </div>
   );
 }
