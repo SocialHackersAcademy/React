@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
+import CustomerService from "./CustomerService";
+
 
 const hobbies = ["Surfing", "Rock climbing", "Mountain biking", "Breakdancing"];
 
@@ -15,14 +17,12 @@ function HobbyList() {
   })}</ul>
 }
 
-
-
-
-
 function App() {
   return (
     <div className="App">
       <HobbyList />
+      <h2>Customer Service</h2>
+      <CustomerService />
     </div>
   );
 }
