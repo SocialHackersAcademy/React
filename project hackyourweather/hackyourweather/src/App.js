@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import CitiesTable from './components/CitiesTable'
+import CitiesTable from './components/CitiesTable';
 
 function App() {
   return (
