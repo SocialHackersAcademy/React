@@ -18,9 +18,9 @@ function Guarantee(props) {
     const [services, setService] = useState(content)
 
     return (
-        <div className="services">{services.map(item => {
+        <div className="services">{services.map((item, index) => {
             return (
-                <Component src={item.src} title={item.title} description={item.description} />
+                <Component key={index} src={item.src} title={item.title} description={item.description} />
             )
         })}</div>
     )
