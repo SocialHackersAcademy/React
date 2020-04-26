@@ -5,7 +5,6 @@ import CityBox from './../CityBox/index'
 
 
 
-console.log(cityWeather)
 
 
 function CitiesTable() {
