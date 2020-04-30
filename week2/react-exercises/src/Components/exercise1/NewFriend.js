@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
-function Friend() {
-    const [friend, setFriend] = useState({})
 
-    let getFriend = useEffect(() => {
+
+function Friend() {
+    const [friend, setFriend] = useState("")
+
+    function getFriend() {
         fetch("https://www.randomuser.me/api?results=1")
             .then(response => response.json())
             .then(data => setFriend(data))
     }
-        , [])
+
 
 
 
@@ -21,16 +23,18 @@ function Friend() {
 
 function FriendProfile(props) {
 
-    const friendData = JSON.stringify(props.friend.results[0].gender)
-    console.log('friend data is', friendData)
+
+
+    const friendData = props.friend.results
+    console.log('friend data is', friendData && friendData[0])
     return (
         <ul>
             <h3>Friend Profile</h3>
-            <h5>Full Name :</h5>
-            <h5>Address : </h5>
-            <h5>Country : </h5>
-            <h5>Email : </h5>
-            <h5>Phone Number : </h5>
+            <h4>Full Name :{friendData && friendData[0].name.first} {friendData && friendData[0].name.last}</h4>
+            <h4>Address : {friendData && friendData[0].location.street.name} {friendData && friendData[0].location.street.number} </h4>
+            <h4>Country : {friendData && friendData[0].location.country}</h4>
+            <h4>Email : {friendData && friendData[0].email}</h4>
+            <h4>Phone Number : {friendData && friendData[0].phone} </h4>
         </ul>
     )
 }
