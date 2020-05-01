@@ -6,10 +6,14 @@ function RandomJoke() {
     useEffect(() => {
         fetch('https://official-joke-api.appspot.com/random_joke')
             .then(response => response.json())
-            .then(data => { setJoke(data) })
+            .then(data => {
+                setJoke(data)
+
+            })
+
+
+
     }, [])
-
-
 
 
 
@@ -23,7 +27,7 @@ function Joke(props) {
 
     return (
         <div>
-            <h2>Random Joke Generator</h2>
+            <h2>Random Joke</h2>
             <p>{props.joke.setup}</p>
             <p>{props.joke.punchline}</p>
         </div>
