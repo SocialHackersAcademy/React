@@ -21,7 +21,7 @@ function DogGallery() {
         <div>
             <Button getDogPhotos={getDogPhotos} />
             <br />
-            {emptyGallery && <h2>Get your first dog by clicking the button!</h2>}
+            {emptyGallery && <h3>Get your first dog by clicking the button!</h3>}
             {dogPhotos.map((url, index) => {
                 return <DogPhoto url={url} key={index} />
             })}
