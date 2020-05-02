@@ -15,10 +15,10 @@ function SearchComponent() {
 
     const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIKEY}`
 
-    function submitHandler(e) {
+    async function submitHandler(e) {
         e.preventDefault()
 
-        fetch(apiUrl)
+        await fetch(apiUrl)
             .then(response => response.json())
             .then(data => setCityData(data))
 
@@ -36,7 +36,7 @@ function SearchComponent() {
                 <input type='text' required placeholder='Search City' onChange={(e) => setCityName(e.target.value)} />
                 <input type='submit' value='Search' />
             </form>
-            <CityBox data={cityData} />
+            {cityData && <CityBox data={cityData} />}
         </div>
     )
 }
