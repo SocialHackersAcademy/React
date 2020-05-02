@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
+import SearchComponent from './Components/SearchComponent'
 
-import CitiesTable from './Components/CitiesTable/index.js';
+
 
 function App() {
   return (
     <div className="App">
-      <CitiesTable />
+      <h1>Weather</h1>
+      <SearchComponent />
     </div>
   );
 }

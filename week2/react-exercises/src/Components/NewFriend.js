@@ -26,7 +26,7 @@ function FriendProfile(props) {
 
 
     const friendData = props.friend.results
-    console.log('friend data is', friendData && friendData[0])
+
     return (
         <ul>
             <h3>Friend Profile</h3>
