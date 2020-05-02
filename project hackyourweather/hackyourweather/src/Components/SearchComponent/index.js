@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import './styles.css'
 import CityBox from './../CityBox'
 
+
+
 const APIKEY = '4bde5fff659a96c59438421c777e914e'
 
 
@@ -13,6 +15,8 @@ function SearchComponent() {
 
 
 
+
+
     const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIKEY}`
 
     async function submitHandler(e) {
@@ -20,14 +24,18 @@ function SearchComponent() {
 
         await fetch(apiUrl)
             .then(response => response.json())
-            .then(data => setCityData(data))
+            .then(data => {
+                setCityData(data)
+                console.log('the setted data is ', data)
 
+            })
 
     }
 
     useEffect(() => {
-        console.log(cityData)
+
     }, [cityData])
+
 
 
     return (
