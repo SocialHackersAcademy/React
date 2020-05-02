@@ -4,7 +4,7 @@ import './App.css'
 import Friend from "./Components/NewFriend"
 import DogGallery from './Components/Dogs'
 import RandomJoke from './Components/RandomJoke'
-//test comment for test commit
+//test comment for test commit 2
 function App() {
 
   return (
