@@ -4,8 +4,7 @@ import './App.css'
 import Friend from "./Components/NewFriend"
 import DogGallery from './Components/Dogs'
 import RandomJoke from './Components/RandomJoke'
-
-
+//test comment for test commit
 function App() {
 
   return (
@@ -16,6 +15,7 @@ function App() {
       <DogGallery />
       <h1>Exercise 3</h1>
       <RandomJoke />
+
 
     </div>
 
