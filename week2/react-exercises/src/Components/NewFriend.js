@@ -27,6 +27,8 @@ function FriendProfile(props) {
 
     const friendData = props.friend.results
 
+    console.log("Friend data at this point is", friendData)
+
     return (
         <ul>
             <h3>Friend Profile</h3>

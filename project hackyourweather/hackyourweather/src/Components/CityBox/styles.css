@@ -11,3 +11,23 @@
     max-width:40vw;
     
 }
+
+
+.header{
+    
+    display:flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+
+
+
+
+.removeButton {
+    display:inline-block;
+    
+    border-radius: 60%;
+    border: 3px solid;
+    padding: 8px;
+  
+}
