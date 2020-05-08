@@ -15,7 +15,7 @@ function CityBox(props) {
             <button
               className="removeButton"
               onClick={() => {
-                props.removeCity(props);
+                props.removeCity(props.index);
               }}
             >
               X

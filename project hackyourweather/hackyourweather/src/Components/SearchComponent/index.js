@@ -5,8 +5,8 @@ import CityBox from "./../CityBox";
 const APIKEY = "4bde5fff659a96c59438421c777e914e";
 
 function SearchComponent() {
-  let [cityName, setCityName] = useState("");
-  let [cityData, setCityData] = useState([]);
+  const [cityName, setCityName] = useState("");
+  const [cityData, setCityData] = useState([]);
 
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIKEY}`;
 
@@ -17,7 +17,7 @@ function SearchComponent() {
       .then((response) => response.json())
       .then((data) => {
         if (data.cod !== "404") {
-          setCityData([...cityData, data]);
+          setCityData([data, ...cityData]);
         } else if (data.cod === "404") {
           alert("City can't be found, please check your spelling");
         }
@@ -26,10 +26,13 @@ function SearchComponent() {
     setCityName("");
   }
 
-  function removeCity(props) {
-    if (cityData.length > 0) {
-      setCityData(cityData.filter((city) => city.id !== props.id));
-    }
+  function removeCity(index) {
+    //if (cityData.length > 0) {
+    //  setCityData(cityData.filter((city) => city.id !== props.id));
+    //}
+    const newCityData = [...cityData];
+    newCityData.splice(index, 1);
+    setCityData(newCityData);
   }
 
   return (
@@ -50,7 +53,7 @@ function SearchComponent() {
           return (
             <CityBox
               key={index}
-              id={city.id}
+              index={index}
               data={city}
               removeCity={removeCity}
             />
