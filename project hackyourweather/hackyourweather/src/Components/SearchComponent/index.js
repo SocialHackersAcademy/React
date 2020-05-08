@@ -5,8 +5,8 @@ import CityBox from './../CityBox';
 const APIKEY = '4bde5fff659a96c59438421c777e914e';
 
 function SearchComponent() {
-	let [ cityName, setCityName ] = useState('');
-	let [ cityData, setCityData ] = useState([]);
+	const [ cityName, setCityName ] = useState('');
+	const [ cityData, setCityData ] = useState([]);
 
 	const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIKEY}`;
 
