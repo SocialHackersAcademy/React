@@ -18,7 +18,7 @@ function SearchComponent() {
             .then((data) => {
                 if (data.cod !== '404') {
 
-                    setCityData([...cityData, data]);
+                    setCityData((prevCityData) => [...prevCityData, data]);
                 }
                 else if (data.cod ==='404') { alert("City can't be found, please check your spelling") }
 
