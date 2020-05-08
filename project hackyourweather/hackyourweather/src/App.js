@@ -1,8 +1,6 @@
-import React from 'react';
-import './App.css';
-import SearchComponent from './Components/SearchComponent'
-
-
+import React from "react";
+import "./App.css";
+import SearchComponent from "./Components/SearchComponent";
 
 function App() {
   return (
