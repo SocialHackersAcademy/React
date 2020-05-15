@@ -27,9 +27,6 @@ function SearchComponent() {
   }
 
   function removeCity(index) {
-    //if (cityData.length > 0) {
-    //  setCityData(cityData.filter((city) => city.id !== props.id));
-    //}
     const newCityData = [...cityData];
     newCityData.splice(index, 1);
     setCityData(newCityData);
