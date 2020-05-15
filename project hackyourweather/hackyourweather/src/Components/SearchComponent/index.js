@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles.css";
 import CityBox from "./../CityBox";
 
@@ -32,6 +32,17 @@ function SearchComponent() {
     setCityData(newCityData);
   }
 
+  useEffect(() => {
+    const localData = localStorage.getItem("cities");
+    if (localData) {
+      setCityData(JSON.parse(localData));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cities", JSON.stringify(cityData));
+  }, [cityData]);
+
   return (
     <div>
       <form onSubmit={submitHandler} className="searchBar">
@@ -59,5 +70,5 @@ function SearchComponent() {
     </div>
   );
 }
-//
+
 export default SearchComponent;
