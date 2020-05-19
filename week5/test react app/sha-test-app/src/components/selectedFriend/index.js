@@ -16,8 +16,9 @@ function SelectedFriend(props) {
       </p>
       <p>{props.data.cell}</p>
       <p>{props.data.email}</p>
-      <button onClick={toggleHidden}>Show more</button>
+
       {hidden === false && <FriendDetails data={props.data} />}
+      <button onClick={toggleHidden}>Show more</button>
     </div>
   );
 }
