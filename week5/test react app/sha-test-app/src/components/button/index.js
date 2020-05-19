@@ -9,7 +9,8 @@ function Button() {
       .then((res) => res.json())
       .then((data) => {
         setfetchedData(data.results);
-      });
+      })
+      .catch((err) => console.log(err));
   }
 
   return (
