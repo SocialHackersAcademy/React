@@ -1,0 +1,33 @@
+.cityBox {
+    box-sizing: border-box;
+    border: 4px solid black;
+    width: initial;
+    text-align: left;
+    display: table;
+    padding: 2vw;
+    height: 24vw;
+    width: 64vw;
+    margin-bottom: 2vh;
+    max-width:40vw;
+    
+}
+
+
+.header{
+    
+    display:flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+
+
+
+
+.removeButton {
+    display:inline-block;
+    
+    border-radius: 60%;
+    border: 3px solid;
+    padding: 8px;
+  
+}
